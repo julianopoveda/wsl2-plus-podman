@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "46980132-465e-4149-b590-d783aceb9bc3",
+		"name": "juridico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "lançar processo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\": \"06830900001689\",\r\n    \"estado\": \"Rio Grande do Sul\",\r\n    \"uf_sigla\": \"RS\",\r\n    \"cidade\": \"São Sebastião do Caí\",\r\n    \"reu\": \"Areta Franklin\",\r\n    \"identidade\": \"99999999999999\",\r\n    \"cliente\": \"Lorem Ipsum\",\r\n    \"status\": \"Arquivado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get processo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/95069158262525",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"95069158262525"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar situação processual",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\": \"06830900001689\",\r\n    \"status\": \"Ativo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir processo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/06830900001689",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"06830900001689"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
