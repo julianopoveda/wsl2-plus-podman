@@ -1,5 +1,6 @@
 # WSL2 + Podman: Uma alternativa ao Docker Desktop
 
+Contém o exemplo de build de container do post [WSL2 + Podman: Uma alternativa ao Docker Desktop](https://dev.to/poveda/wsl2-podman-uma-alternativa-ao-docker-desktop-5cd6)
 
 ## Projeto Jurídico
 
@@ -16,7 +17,7 @@ Executa o install_podman.sh :smile:
 
 Pelo powershell
 ```powershell
-wsl exec sh install_podman.sh
+wsl exec sh ./install_podman.sh
 ```
 
 Dentro da distro
