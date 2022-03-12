@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: juridico-deployment
+  labels:
+    app: juridico
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app:	juridico
+  template:
+    metadata:
+      labels:
+        app: juridico
+    spec:
+      containers:
+      - name: juridicoapp
+        image: localhost/juridico:latest
+        imagePullPolicy: IfNotPresent
+        ports: 
+        - containerPort: 3001
