@@ -19,13 +19,45 @@ Executa o install_podman.sh :smile:
 Pelo powershell
 
 ```powershell
-wsl exec sh ./install_podman.sh
+wsl exec sh ./scripts/install_podman.sh
 ```
 
 Dentro da distro
 
 ```sh
-sh install_podman.sh
+sh scripts/install_podman.sh
+```
+
+## Scripts de instalação do ecossistema minikube + podman
+
+Para tornar o ambiente minikube com o podman minimamente viável, é necessário instalar uma série de ferramentas além do próprio minikube. A instalação de cada ferramenta necessária foi separada em um script. Desta forma é possível instalar somente o componente que está faltando.
+
+A exceção do script de instalação do CRI-O, todos seguem a mesma forma de execução do script de instalação do podman:
+
+Pelo powershell
+
+```powershell
+wsl exec sh ./scripts/install_<ferramenta>.sh
+```
+
+Dentro da distro
+
+```sh
+sh scripts/install_<ferramenta>.sh
+```
+
+No caso do script de instalação do CRI-O é necessário passar a versão do CRI-O que deseja-se instalar (as versões podem ser consultadas [aqui](https://github.com/cri-o/cri-o#compatibility-matrix-cri-o--kubernetes)). Para executar o script:
+
+Pelo powershell
+
+```powershell
+wsl exec sh ./scripts/install_crio.sh 1.23
+```
+
+Dentro da distro
+
+```sh
+sh scripts/install_crio.sh 1.23
 ```
 
 <!-- Adicionar aqui o comando completo para executar o minikube com todos os add-ons habilitados -->

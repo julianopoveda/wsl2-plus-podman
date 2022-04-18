@@ -10,11 +10,3 @@ curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/
 
 sudo apt update
 sudo apt install cri-o cri-o-runc
-
-
-echo "verificando se o kubectl esta instalado"
-type -p kubectl #checa se o kubectl existe sem imprimir nada na tela
-if [ $? -eq 1 ] 
-then
-#instalar kubectl
-fi
