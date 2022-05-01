@@ -5,20 +5,13 @@ WORKDIR /src
 
 RUN apk add bash \
     && apk add curl     
-
 COPY app .
-
 RUN npm install
 
 FROM node:alpine3.14
-
+LABEL application=juridico
 RUN apk add bash
-
 RUN apk add curl
-
-
 WORKDIR /app
-
 COPY --from=builder /src .
-
 CMD [ "node", "server.js" ]
